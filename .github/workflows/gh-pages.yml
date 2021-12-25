@@ -1,0 +1,30 @@
+name: Github Pages
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Install Dependencies
+        run: yarn
+      - name: Build Angular Project
+        run: yarn build
+      - name: Setup Git Config
+        run: |
+          git config --global set user.email="ethereal97@gmail.com"
+          git config --global set user.name="SKM Etheloper"
+      - name: Commit changes
+        run: |
+          mv dist/ethereal-ng13-starter docs
+          git checkout --orphan gh-pages
+          git add --all
+          git commit -m "Github Pages"
+          git push origin gh-pages --force
+
