@@ -7,10 +7,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 
-const routerOption = {
-  useHash: true
-};
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +14,7 @@ const routerOption = {
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes, routerOption),
+    RouterModule.forRoot(routes),
     BrowserAnimationsModule
   ],
   providers: [],
