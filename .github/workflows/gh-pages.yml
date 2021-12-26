@@ -24,6 +24,7 @@ jobs:
       - name: Commit Git Changes
         run: |
           mv dist/ethereal-ng13-starter docs
+          cp docs/index.html docs/404.html
           git checkout --orphan gh-pages
           git add --all
           git commit -m "Github Pages"
