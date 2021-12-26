@@ -5,11 +5,11 @@ export const routes: Routes = [
     path: '',
     pathMatch: 'full',
     loadChildren: () =>
-      import('./pages/welcome/welcome.component').then(m => m.WelcomeComponent)
+      import('./pages/welcome/welcome.module').then(m => m.WelcomeModule)
   },
   {
     path: 'about',
     loadChildren: () =>
-      import('./pages/about/about.component').then(m => m.AboutComponent)
+      import('./pages/about/about.module').then(m => m.AboutModule)
   }
 ];
