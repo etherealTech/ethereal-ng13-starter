@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ethereal-ng13-starter:build:production"
+              "browserTarget": "ng13-starter:build:production"
             },
             "development": {
-              "browserTarget": "ethereal-ng13-starter:build:development"
+              "browserTarget": "ng13-starter:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ethereal-ng13-starter:build"
+            "browserTarget": "ng13-starter:build"
           }
         }
       }
