@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IconsModule } from './core/icons/icons.module';
 
 import { routes } from './app.routing';
+
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
+    IconsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

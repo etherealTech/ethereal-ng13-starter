@@ -1,15 +1,10 @@
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
+import { AppComponent } from './app.component';
 
 export const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    loadChildren: () =>
-      import('./pages/welcome/welcome.module').then(m => m.WelcomeModule)
-  },
-  {
-    path: 'about',
-    loadChildren: () =>
-      import('./pages/about/about.module').then(m => m.AboutModule)
+    component: AppComponent,
+    children: [],
   }
 ];

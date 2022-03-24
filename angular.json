@@ -12,6 +12,15 @@
         },
         "@schematics/angular:application": {
           "strict": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
         }
       },
       "root": "",
@@ -91,5 +100,8 @@
       }
     }
   },
-  "defaultProject": "ng13-starter"
+  "defaultProject": "ng13-starter",
+  "cli": {
+    "packageManager": "yarn"
+  }
 }
